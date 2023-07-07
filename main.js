@@ -73,18 +73,23 @@ let book3 = library.addBook({
   author: 'Malala Yousafza'
 })
 
-let allBooks = library.getBooks()
-console.log(allBooks)
+// Todos os livros antes de alterações
+console.log(library.getBooks())
 
-
+// Removendo um livro
 library.removeBookById(0)
 
+// Todos os livros após remoção de um livro
+console.log(library.getBooks())
 
-let foundBook = library.getBookById(0)
-console.log(foundBook)
+// Pegando um livro pelo id
+console.log(library.getBookById(0))
 
-
+// Alterando atributos de um livro pelo id
 library.updateBookById(1, {
   title: 'Novo Título',
   description: 'Nova Descrição'
 })
+
+// Verificando o livro após alteração
+console.log(library.getBookById(1))
